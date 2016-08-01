@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>OnlineShoppingJSP</display-name>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.bitwise.OnlineShopping.container.CartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteFromCart</servlet-name>
+        <servlet-class>com.bitwise.OnlineShopping.container.DeleteFromCart</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginSuccess</servlet-name>
+        <servlet-class>LoginSuccess</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddToCart</servlet-name>
+        <servlet-class>com.bitwise.OnlineShopping.container.AddToCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteFromCart</servlet-name>
+        <url-pattern>/DeleteFromCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginSuccess</servlet-name>
+        <url-pattern>/LoginSuccess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddToCart</servlet-name>
+        <url-pattern>/AddToCart</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.bitwise.OnlineShopping.container.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/LoginPage</url-pattern>
+    </filter-mapping>
+</web-app>
